@@ -1,0 +1,6 @@
+transformers
+torch
+speechrecognition
+pyttsx3
+openai
+python-dotenv

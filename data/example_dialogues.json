@@ -1,0 +1,11 @@
+[
+    {"scenario": "demo_scheduling", "input": "Mujhe ERP demo lena hai", "response": "Aap kaunsa time prefer karenge?"},
+    {"scenario": "candidate_interview", "input": "Main ek software engineer hoon", "response": "Aapke paas kitne saal ka experience hai?"},
+    {"scenario": "payment_followup", "input": "Main kal payment kar dunga", "response": "Theek hai, main kal aapse confirm kar lunga."},
+    {"scenario": "demo_scheduling", "input": "ERP ke features kya hain?", "response": "ERP ek cloud-based system hai jo AI-powered analytics provide karta hai."},
+    {"scenario": "candidate_interview", "input": "Mere paas 3 saal ka ML experience hai", "response": "Aapke favorite ML algorithms kaunse hain?"},
+    {"scenario": "payment_followup", "input": "Mujhe invoice resend karna padega", "response": "Theek hai, main aapko turant invoice bhej deta hoon."},
+    {"scenario": "demo_scheduling", "input": "Mujhe kal morning mein demo chahiye", "response": "Aapko 10 AM ya 11 AM ka slot prefer karna chahenge?"},
+    {"scenario": "candidate_interview", "input": "Mujhe Python aur Java dono aate hain", "response": "Konsi language mein aap comfortable feel karte hain?"},
+    {"scenario": "payment_followup", "input": "Maine abhi tak payment initiate nahi kiya hai", "response": "Kya main aapko payment details bhej sakta hoon?"}
+]

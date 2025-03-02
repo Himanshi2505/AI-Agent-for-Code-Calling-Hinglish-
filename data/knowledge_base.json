@@ -1,0 +1,19 @@
+{
+    "ERP": {
+        "features": "Cloud-based, AI-powered analytics",
+        "pricing": "Starts at ₹10,000/month",
+        "modules": ["Finance", "HR", "Inventory Management", "CRM"]
+    },
+    "candidates": {
+        "Rahul Sharma": {"experience": "5 years", "skills": "Python, ML"},
+        "Priya Mehta": {"experience": "3 years", "skills": "Java, React"},
+        "Aman Verma": {"experience": "7 years", "skills": "DevOps, AWS"},
+        "Sonia Gupta": {"experience": "2 years", "skills": "Flutter, Dart"}
+    },
+    "customers": {
+        "Amit Verma": {"last_order": "₹50,000", "payment_due": "₹10,000"},
+        "Rajesh Kumar": {"last_order": "₹1,20,000", "payment_due": "₹20,000"},
+        "Neha Sharma": {"last_order": "₹75,000", "payment_due": "₹5,000"},
+        "Vikram Singh": {"last_order": "₹90,000", "payment_due": "₹15,000"}
+    }
+}
