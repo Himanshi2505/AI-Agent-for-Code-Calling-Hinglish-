@@ -5,6 +5,7 @@ class HinglishChatbot:
         self.generator = pipeline("text-generation", model=model_name, device_map="auto")
         self.current_scenario = None
         self.conversation_history = []
+        
 
     def set_scenario(self, scenario):
         self.current_scenario = scenario
@@ -25,7 +26,7 @@ class HinglishChatbot:
 
         response = self.generator(
             prompt,
-            max_new_tokens=100,  # Increased token limit for more complete responses
+            max_new_tokens=500,  # Increased token limit for more complete responses
             do_sample=True,
             return_full_text=False,
             temperature=0.7,

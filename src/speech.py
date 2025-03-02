@@ -29,9 +29,9 @@ class AudioHandler:
     def speech_to_text(self):
         with sr.Microphone() as source:
             print("Listening...")
-            self.recognizer.adjust_for_ambient_noise(source, duration=0.5)
+            self.recognizer.adjust_for_ambient_noise(source, duration=1)  # Adjust for ambient noise
             try:
-                audio = self.recognizer.listen(source, timeout=5, phrase_time_limit=10)
+                audio = self.recognizer.listen(source, timeout=10, phrase_time_limit=15)  # Increased timeout and phrase time limit
                 print("Processing speech...")
                 text = self.recognizer.recognize_google(audio, language="hi-IN")
                 print(f"Recognized: {text}")
