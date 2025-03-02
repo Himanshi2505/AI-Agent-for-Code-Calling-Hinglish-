@@ -19,15 +19,8 @@
 
 # if __name__ == "__main__":
 #     main()
-
 from chatbot import HinglishChatbot
-from speech import speech_to_text, text_to_speech
-# from prompts import DEMO_SCHEDULING_PROMPT, CANDIDATE_INTERVIEW_PROMPT, PAYMENT_FOLLOWUP_PROMPT #Not needed
-def fallback_speech_to_text():
-    return input("User (Text): ")
-
-def fallback_text_to_speech(text):
-    print(f"Bot: {text}")
+from speech import audio_handler
 
 def main():
     chatbot = HinglishChatbot()
@@ -58,17 +51,22 @@ def main():
         print(f"Scenario: {chatbot.current_scenario}")
 
         while True:
-            print("\nEnter your message or type 'back' to change scenario:")
-            user_input = fallback_speech_to_text()
+            print("\nPress Enter to start speaking, or type 'back' to change scenario:")
+            user_input = input()
 
             if user_input.lower() == 'back':
-                break  # Back to scenario selection
+                break
 
-            try:
-                response = chatbot.respond(user_input)
-                fallback_text_to_speech(response)
-            except Exception as e:
-                print(f"Error: {e}")
+            if not user_input:
+                user_input = audio_handler.speech_to_text()
+                if user_input is None:
+                    continue
+            
+            print(f"User: {user_input}")
+
+            response = chatbot.respond(user_input)
+            print(f"Bot: {response}")
+            audio_handler.text_to_speech(response)
 
 if __name__ == "__main__":
     try:
